@@ -93,3 +93,5 @@ func (server *Server) getUser(ctx *gin.Context) {
 
 	ctx.JSON(http.StatusOK, rsp)
 }
+
+// TODO: Add list user and update user endpoints
