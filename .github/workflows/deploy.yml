@@ -22,7 +22,7 @@ on:
       environment:
         description: 'Environment to run deployment tests against'
         type: environment
-        required: true  
+        required: false  
 
 jobs:
 
@@ -31,6 +31,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+      
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
